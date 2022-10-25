@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+     <style>
+        body {
+            background-image:url('https://www.investopedia.com/thmb/sU0qAcPeNZhG2ifY1MWk9cASFZI=/1500x1000/filters:fill(auto,1)/GettyImages-1156401461-e8de0eccad7842818213bdac570b1092.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        table{
+            color:whitesmoke;
+        }
+            div{
+            display: flex;
+            padding: 0%;
+            justify-content: end;
+        }
+        .home{
+            height:30px;
+            width: 70px;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            color:black;
+        }
+
+    </style>
+     
+
+    
+</head>
+<body>
+    <div>
+        <div class="home"><a href="cab homepage.html">Home</a></div>
+    </div>
+    <center><h1 style="color:antiquewhite">Registration</h1>
+        <form action="login.html" method="GET" style="border:1px solid black ;margin-right:370px;margin-left:370px;background-color:rgba(0, 0, 0, 0.637);padding:10px">
+        <table>
+            <tr>
+                <td><label for="title">Title</label></td>
+                <td><select id="title" name="title">
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="firstname">FIRST NAME</label></td>
+                <td><input type="text" id="firstname" placeholder="Enter First name"></td>
+
+            </tr>
+            <tr>
+                <td><label for="secondname">SECOND NAME</label></td>
+                <td><input type="text" id="secondname" placeholder="Enter second name"></td>
+           </tr>
+           <tr>
+            <td><label for="address">ADDRESS</label></td>
+            <td><textarea name="address" id="address" placeholder="Enter Address" rows="6"></textarea></td>
+           </tr>
+           <tr>
+            <td><label for="Gender">GENDER</label></td>
+            <td><input type="radio" name="Gender" id="female">Female
+            <input type="radio" name="Gender" id="male">Male</td>
+        </tr>
+           <tr>
+            <td>
+                <label for="birthday">DATE OF BIRTH</label>
+            </td>
+            <td><input type="date" placeholder="DOB"></td>
+           </tr>
+           <td><label for="email">EMAIL ID</label></td>
+           <td><input type="email" id="email" placeholder="Enter yor email id"></td>
+           <tr>
+            <td><label for="mobile">MOBILE</label></td>
+            <td><input type="number" id="mobile" placeholder="Enter Phone Number"></td>
+            <tr>
+                <td><label for="image">Upload Photo</label></td>
+                <td><input type="file" name="image" id="image" accept="image/*"></td>
+                <br>
+            </tr>
+            <tr>
+                <td><label for="communication">Can we contact you?</label></td>
+                <td><input type="radio" name="communication" id="communicationyes">YES
+                <input type="radio" name="communication" id="communicationno">NO</td>
+            </tr>
+        </tr>
+        <td><lablel for="prefernce">Communication prefrence</lablel></td>
+        <td><input type="checkbox"  name="checkmail" >Email
+        <input type="checkbox" name="checksms" >SMS</td>
+        <tr>
+            <td><input type="checkbox" name="termsandcondition" id="teremsandcondition">
+            <label for="teremsandcondition">I agree with terms and condition</label></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit" value="Submit" onclick="saveData()" ></td>
+            <td> <input type="reset" name="Reset" value="Reset" onclick="alert(document.URL)"></td>
+        </tr>
+        </table>
+        </form></center>
+        <script>
+        
+            function saveData(){
+                debugger
+                var firstname=document.getElementById('firstname').value;
+                var secondname=document.getElementById('secondname').value;
+                var address=document.getElementById('address').value;
+                alert('FIRST NAME '+firstname);
+                //var formData ={
+                   // firstname: firstname,
+                    //secondname: secondname,
+                    //address:address,
+                //}
+                localStorage.setItem('firstname', firstname)
+                localStorage.setItem('secondname',secondname)
+            }
+    
+        </script>
+        
+    </body>
+</html>
+    
+</body>
+</html>
